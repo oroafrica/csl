@@ -15,9 +15,9 @@ L(c,'"'+c.family+'",sans-serif'));A(p,function(a){g=a;v()});u(p,L(c,'"'+c.family
     // new FontFaceObserver($(".ty-product-block-title").text()).load().then(()=> {console.log("font loaded");});
 
     Promise.all([
-        new FontFaceObserver('cname')
-        ,new FontFaceObserver('bname')
-        ,new FontFaceObserver('mname')])
+        new FontFaceObserver('cname').load()
+        ,new FontFaceObserver('bname').load()
+        ,new FontFaceObserver('mname').load()])
         .then(()=>{console.log('Classic Family Loaded');});
 
 })();

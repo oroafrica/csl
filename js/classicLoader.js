@@ -47,7 +47,7 @@
                 ,cw:450
                 ,ch:450
                 ,chainWidth:240
-                ,prefixMap:(a)=>{return (a.length > 0 && a.substr(0,1).match(/[a-z]/g)) ? -127 : -150;}
+                ,prefixMap:(a)=>{return (a.length > 0 && a.substr(0,1).match(/[a-z]/g)) ? -30 : -50;}
                 ,suffixMap:(accent,motif)=>
                 {
                     let n = {0:-132, 1:-123, 2:-132, 3:-122,4:-124,5:-123,6:-132,7:-122};
@@ -136,7 +136,7 @@
 
         var msg = (a)=>{console.log(a);};
 
-        var dev=true;
+        var dev=false;
         var renderBounds=false;
         var con = config[$(".ty-product-block-title").text().toLowerCase()];  
         var canvas = new fabric.Canvas(config.global.canvasId,{backgroundColor:config.global.screen,width:con.cw,height:con.ch,objectCaching:false,hoverCursor:"pointer"});
