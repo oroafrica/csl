@@ -12,5 +12,12 @@ n+"ms timeout exceeded"));else{var a=document.hidden;if(!0===a||void 0===a)f=e.a
 L(c,'"'+c.family+'",sans-serif'));A(p,function(a){g=a;v()});u(p,L(c,'"'+c.family+'",serif'));A(q,function(a){h=a;v()});u(q,L(c,'"'+c.family+'",monospace'))})})};"object"===typeof module?module.exports=B:(window.FontFaceObserver=B,window.FontFaceObserver.prototype.load=B.prototype.load);}());
 
 (()=>{
-    new FontFaceObserver($(".ty-product-block-title").text()).load().then(()=> {console.log("font loaded");});
+    // new FontFaceObserver($(".ty-product-block-title").text()).load().then(()=> {console.log("font loaded");});
+
+    Promise.all([
+        new FontFaceObserver('cname')
+        ,new FontFaceObserver('bname')
+        ,new FontFaceObserver('mname')])
+        .then(()=>{console.log('Classic Family Loaded');});
+
 })();
