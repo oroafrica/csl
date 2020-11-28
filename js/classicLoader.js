@@ -50,13 +50,13 @@
                 ,prefixMap:(a)=>{return (a.length > 0 && a.substr(0,1).match(/[a-z]/g)) ? -30 : -50;}
                 ,suffixMap:(accent,motif)=>
                 {
-                    let n = {0:-132, 1:-123, 2:-132, 3:-122,4:-124,5:-123,6:-132,7:-122};
+                    let n = {0:-32, 1:-23, 2:-32, 3:-22,4:-24,5:-23,6:-32,7:-22};
                     return (accent === 0) ? Object.values(n)[motif] : Object.values(n)[motif+4];
                 }
                 ,accentMap:(bounds,i)=>{ let a = bounds.left+bounds.width;
                 return {
                     x:Object.values({0:0, 1:0, 2:0, 3:0, 4:(a-10),5:(a-22),6:(a-12.5),7:(a-25)})[i]
-                    ,y:Object.values({0:0, 1:0, 2:0, 3:0, 4:127,5:125,6:122,7:120})[i]}
+                    ,y:Object.values({0:0, 1:0, 2:0, 3:0, 4:227,5:225,6:222,7:220})[i]}
                 }
                 ,prefixFn:(d)=> {return (d.length >= 1) ? String.fromCharCode(d.substring(0,1).charCodeAt(0) + 60000) : "";}
                 ,infixFn:(a)=> {return (a.length > 1) ? a.substring(1,a.length) : "";}
@@ -93,16 +93,16 @@
                 ,cw:450
                 ,ch:450
                 ,chainWidth:240
-                ,prefixMap:(a)=>{return (a.length > 0 && a.substr(0,1).match(/[a-z]/g)) ? -119 : -118;}
+                ,prefixMap:(a)=>{return (a.length > 0 && a.substr(0,1).match(/[a-z]/g)) ? -19 : -18;}
                 ,suffixMap:(accent,motif)=>
                 {
-                    let n = {0:-119, 1:-119, 2:-119, 3:-119, 4:-119,5:-119,6:-119,7:-119};
+                    let n = {0:-19, 1:-19, 2:-19, 3:-19, 4:-19,5:-19,6:-19,7:-19};
                     return (accent === 0) ? Object.values(n)[motif] : Object.values(n)[motif+4];
                 }
-                ,accentMap:(bounds,i)=>{ let a = bounds.left+bounds.width;
+                ,accentMap:(bounds,i)=>{ let a = bounds.left + bounds.width;
                 return {
                     x:Object.values({0:0, 1:0, 2:0, 3:0, 4:(a-6),5:(a-13),6:(a-9),7:(a-15)})[i]
-                    ,y:Object.values({0:0, 1:0, 2:0, 3:0, 4:131,5:131,6:130,7:128})[i]}
+                    ,y:Object.values({0:0, 1:0, 2:0, 3:0, 4:231,5:231,6:230,7:228})[i]}
                 }
                 ,prefixFn:(d)=> {return (d.length >= 1) ? String.fromCharCode(d.substring(0,1).charCodeAt(0) + 60000) : "";}
                 ,infixFn:(a)=> {return (a.length > 1) ? a.substring(1,a.length) : "";}
