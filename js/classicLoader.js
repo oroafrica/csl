@@ -135,7 +135,7 @@
         };
 
         var msg = (a)=>{console.log(a);};
-
+        //constructor
         var dev=false;
         var renderBounds=false;
         var con = config[$(".ty-product-block-title").text().toLowerCase()];  
@@ -288,8 +288,7 @@
 		msg(JSON.stringify(report));
         }
     
-        //------------------------------------------------------------------------------------------------------------//
-        //-----------------------------------------------------------------------------------------------------------//
+
         var render = ()=>
         {
             $(document).on("keyup change", [user.txt1,user.alloy], (e)=>
